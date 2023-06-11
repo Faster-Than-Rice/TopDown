@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 2182082967841203176}
   m_Layer: 9
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 5
-  target: {fileID: 0}
   effect: {fileID: 5032362366267668215, guid: 4cc4026c723fa8e44ae0e0abd496a993, type: 3}
   activeDistance: 100
 --- !u!114 &2182082967841203090

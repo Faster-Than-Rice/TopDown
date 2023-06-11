@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Missile : MonoBehaviour, IWeapon
 {
@@ -27,7 +28,17 @@ public class Missile : MonoBehaviour, IWeapon
             {
                 counter = 0;
                 GameObject instance = Instantiate(bullet, muzzle.position, muzzle.rotation);
-                instance.GetComponent<MissileBullet>().SetTarget(GameObject.FindGameObjectWithTag("Player"));
+
+                if (transform.root.CompareTag("Player"))
+                {
+                    if(GameObject.FindGameObjectsWithTag("Enemy").Length != 0)
+                    instance.GetComponent<MissileBullet>().SetTarget(GameObject.FindGameObjectsWithTag("Enemy")
+                        .OrderBy(point => Vector3.Distance(transform.root.position, point.transform.position)).ToList()[0]);
+                }
+                else
+                {
+                    instance.GetComponent<MissileBullet>().SetTarget(GameObject.FindGameObjectWithTag("Player"));
+                }
             }
         }
     }

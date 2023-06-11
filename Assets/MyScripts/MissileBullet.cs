@@ -16,7 +16,8 @@ public class MissileBullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Destroy(gameObject, 30);
+        rb.AddForce(transform.forward * speed * Time.deltaTime, ForceMode.Impulse);
+        Invoke(nameof(Hit), 10);
     }
 
     public void SetTarget(GameObject _target)
@@ -28,7 +29,7 @@ public class MissileBullet : MonoBehaviour
     {
         rb.AddForce(speed * Time.deltaTime * transform.forward);
 
-        if (Vector3.Angle(transform.forward, target.transform.position - transform.position) >= 20)
+        if (target == null || Vector3.Angle(transform.forward, target.transform.position - transform.position) >= 50)
         {
             isFollow = false;
         }
@@ -60,6 +61,11 @@ public class MissileBullet : MonoBehaviour
         {
             hit.Damage(damage);
         }
+        Hit();
+    }
+
+    void Hit()
+    {
         Instantiate(effect, transform.position, Quaternion.identity);
         Destroy(gameObject, GetComponent<TrailRenderer>().time);
     }

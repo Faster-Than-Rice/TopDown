@@ -48,7 +48,7 @@ public class PlayerWeapon : MonoBehaviour
             weaponObject = Instantiate(weapons[changeNumber - 1], transform.position, Quaternion.identity);
             weaponObject.transform.SetParent(transform);
             weaponObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
-            weapon = weaponObject.GetComponent<Gun>();
+            weapon = weaponObject.GetComponent<IWeapon>();
         }
 
         Cursor.lockState = CursorLockMode.Confined;
