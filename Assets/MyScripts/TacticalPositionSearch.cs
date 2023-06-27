@@ -6,47 +6,22 @@ using System.Linq;
 public class TacticalPositionSearch : MonoBehaviour
 {
     [SerializeField] float maxDistance;
-    [SerializeField] float minDistance;
+    List<GameObject> allPoints;
 
-    public GameObject Search(Transform target, bool isHide, bool isMax)
+    private void Start()
     {
-        List<GameObject> points = new();
+        allPoints = GameObject.FindGameObjectsWithTag("TacticalPoint").ToList();
+    }
 
-        points = GameObject.FindGameObjectsWithTag("TacticalPoint").ToList();
+    public List<GameObject> Search(Transform target)
+    {
+        List<GameObject> points = new List<GameObject>(allPoints);
+        points.RemoveAll
+           (point => (point.transform.position - target.position).sqrMagnitude >= maxDistance * maxDistance
+        || Physics.OverlapSphere(point.transform.position, 0).Length > 0
+        || Physics.Raycast(point.transform.position, target.position - point.transform.position, out RaycastHit hit)
+        && hit.collider.gameObject != target.gameObject);
 
-        points.RemoveAll(point => (point.transform.position - target.position).sqrMagnitude <= minDistance * minDistance
-        || (point.transform.position - target.position).sqrMagnitude >= maxDistance * maxDistance
-        || Physics.OverlapSphere(point.transform.position, 0).Length > 0);
-
-        if (isHide)
-        {
-            points.RemoveAll(point =>
-            Physics.Raycast(point.transform.position, target.position - point.transform.position, out RaycastHit hit)
-            && hit.collider.gameObject == target.gameObject);
-        }
-        else
-        {
-            points.RemoveAll(point =>
-           Physics.Raycast(point.transform.position, target.position - point.transform.position, out RaycastHit hit)
-           && hit.collider.gameObject != target.gameObject);
-        }
-
-        if (isMax)
-        {
-            points = points.OrderByDescending(point => Vector3.Distance(target.position, point.transform.position)).ToList();
-        }
-        else
-        {
-            points = points.OrderBy(point => Vector3.Distance(target.position, point.transform.position)).ToList();
-        }
-
-        if(points.Count == 0)
-        {
-            return null;   
-        }
-        else
-        {
-            return points[Random.Range(0, points.Count - 1)];
-        }
+        return points;
     }
 }

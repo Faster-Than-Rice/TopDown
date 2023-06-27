@@ -2,7 +2,6 @@ interface IEnemyState
 {
     void Normal();
     void Aggressive();
-    void Negative();
 }
 
 public class EnemyState

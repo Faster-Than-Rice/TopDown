@@ -6,16 +6,20 @@ using UnityEngine.AI;
 [RequireComponent(typeof(EnemyStatus), typeof(EnemyWeapon), typeof(TacticalPositionSearch))]
 public class Infantry : MonoBehaviour, IEnemyState
 {
+    [SerializeField] float followingDistance;
     EnemyState state = new();
     EnemyStatus status;
     TacticalPositionSearch tacticalPosition;
     NavMeshAgent agent;
+    GameObject agentTarget;
+    GameObject target;
 
     private void Start()
     {
         tacticalPosition = GetComponent<TacticalPositionSearch>();
         agent = GetComponent<NavMeshAgent>();
         status = GetComponent<EnemyStatus>();
+        target = GameObject.FindGameObjectWithTag("Player");
 
         Normal();
     }
@@ -23,8 +27,7 @@ public class Infantry : MonoBehaviour, IEnemyState
     void Update()
     {
         //Aggressiveà⁄çs
-        if (state.state == EnemyState.State.Normal
-            && Vector3.Distance(transform.position, status.target.transform.position) <= 50)
+        if (state.state == EnemyState.State.Normal)
         {
             Aggressive();
         }
@@ -41,10 +44,6 @@ public class Infantry : MonoBehaviour, IEnemyState
         state.state = EnemyState.State.Aggressive;
     }
 
-    public void Negative()
-    {
-    }
-
     public void Normal()
     {
         if (state.state == EnemyState.State.Normal)
@@ -55,14 +54,23 @@ public class Infantry : MonoBehaviour, IEnemyState
 
     void Action()
     {
-        if (agent.destination != null 
-            && Vector3.Distance(transform.position, agent.destination) <= 2)
+        if (state.state == EnemyState.State.Aggressive 
+            && (agent.destination == null || Vector3.Distance(transform.position, agent.destination) <= 10))
         {
-            GameObject pos = tacticalPosition.Search(status.target.transform, false, false);
-
-            if(pos != null)
+            if(Vector3.Distance(transform.position, target.transform.position) <= followingDistance)
             {
-                agent.SetDestination(pos.transform.position);
+                List<GameObject> pos = tacticalPosition.Search(target.transform);
+                pos.RemoveAll(point => point == agentTarget);
+
+                if (pos.Count != 0)
+                {
+                    agentTarget = pos[Random.Range(0, pos.Count - 1)];
+                    agent.SetDestination(agentTarget.transform.position);
+                }
+            }
+            else
+            {
+                agent.SetDestination(target.transform.position);
             }
         }
     }

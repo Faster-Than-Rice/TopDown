@@ -8,11 +8,13 @@ public class Assault : MonoBehaviour, IEnemyState
     EnemyState state = new();
     EnemyStatus status;
     NavMeshAgent agent;
+    GameObject target;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         status = GetComponent<EnemyStatus>();
+        target = GameObject.FindGameObjectWithTag("Player");
 
         Normal();
     }
@@ -21,7 +23,7 @@ public class Assault : MonoBehaviour, IEnemyState
     {
         //Aggressiveà⁄çs
         if (state.state == EnemyState.State.Normal
-            && Vector3.Distance(transform.position, status.target.transform.position) <= status.activeDistance)
+            && Vector3.Distance(transform.position, target.transform.position) <= status.activeDistance)
         {
             Aggressive();
         }
@@ -38,11 +40,7 @@ public class Assault : MonoBehaviour, IEnemyState
             return;
 
         state.state = EnemyState.State.Aggressive;
-        agent.SetDestination(status.target.transform.position);
-    }
-
-    public void Negative()
-    {
+        agent.SetDestination(target.transform.position);
     }
 
     public void Normal()
@@ -55,6 +53,6 @@ public class Assault : MonoBehaviour, IEnemyState
 
     void Action()
     {
-        agent.SetDestination(status.target.transform.position);
+        agent.SetDestination(target.transform.position);
     }
 }

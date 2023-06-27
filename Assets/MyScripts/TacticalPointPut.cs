@@ -13,7 +13,6 @@ public class TacticalPointPut : MonoBehaviour
     [ContextMenu("Put")]
     void Put()
     {
-        points.Clear();
         foreach (Vector3 point in MyUtility.Grid(transform.position, interval, number))
         {
             GameObject _point = Instantiate(pointObject, point, Quaternion.identity);
@@ -25,6 +24,7 @@ public class TacticalPointPut : MonoBehaviour
     [ContextMenu("Clear")]
     void Clear()
     {
+        if(points.Count != 0)
         points.Clear();
     }
 }

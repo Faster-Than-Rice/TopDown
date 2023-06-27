@@ -103,8 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5ded0efd6917c45975ed21f9dcf9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 10
-  minDistance: 0
+  maxDistance: 200
 --- !u!114 &1864358789057570224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa3c707281245c479d5712d218aa218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followingDistance: 100
 --- !u!114 &1864358789057570226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 60
-  m_Acceleration: 20
+  m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 0
   m_StoppingDistance: 0

@@ -56,9 +56,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a70d05d7c31f4b45887de6441bd8698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 5032362366267668215, guid: 87f5ac7c7f4bf7e419442bbf4a234ea1, type: 3}
+  effect: {fileID: 5032362366267668215, guid: 0b81823150935fe4d81185a5491135e2, type: 3}
   speed: 3000
-  torqueRatio: 10
+  torqueRatio: 0
   damage: 5
 --- !u!54 &737920752331673930
 Rigidbody:

@@ -10,11 +10,13 @@ public class EnemyWeapon : MonoBehaviour
     [SerializeField] float randomValue;
     EnemyStatus status;
     IWeapon iWeapon;
+    GameObject target;
 
     private void Awake()
     {
         status = GetComponent<EnemyStatus>();
         iWeapon = weapon.GetComponent<IWeapon>();
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void FixedUpdate()
@@ -22,10 +24,10 @@ public class EnemyWeapon : MonoBehaviour
         LookTarget();
 
         //射撃（射線・射程・角度判定）
-        if (Vector3.Distance(status.target.transform.position, transform.position) <= range
-            && Physics.Raycast(transform.position, status.target.transform.position - transform.position, out RaycastHit hit)
-            && hit.collider.gameObject == status.target
-            && Vector3.Angle(transform.forward, status.target.transform.position - transform.position) <= 30)
+        if (Vector3.Distance(target.transform.position, transform.position) <= range
+            && Physics.Raycast(transform.position, target.transform.position - transform.position, out RaycastHit hit)
+            && hit.collider.gameObject == target
+            && Vector3.Angle(transform.forward, target.transform.position - transform.position) <= 30)
         {
             iWeapon.Attack();
         }
@@ -34,7 +36,7 @@ public class EnemyWeapon : MonoBehaviour
     void LookTarget()
     {
         Vector3 vector3 = (new Vector3(Random.Range(0, randomValue), 0, Random.Range(0,randomValue)) 
-            + status.target.transform.position) - this.transform.position;
+            + target.transform.position) - this.transform.position;
         Quaternion quaternion = Quaternion.LookRotation(vector3);
         transform.rotation = Quaternion.Slerp(this.transform.rotation, quaternion, speed);
     }

@@ -5,14 +5,12 @@ using UnityEngine;
 public class EnemyStatus : MonoBehaviour
 {
     public int hp;
-    [System.NonSerialized] public GameObject target;
     public GameObject effect;
     public float activeDistance;
     Combo combo;
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
         combo = GameObject.FindGameObjectWithTag("Player").GetComponent<Combo>();
     }
 

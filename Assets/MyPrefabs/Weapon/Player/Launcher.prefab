@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3126434715197650761}
   - component: {fileID: -177617098929354640}
-  - component: {fileID: 596915166231501638}
+  - component: {fileID: -6124357202391637148}
   m_Layer: 8
   m_Name: Launcher
   m_TagString: Untagged
@@ -142,7 +142,7 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
---- !u!114 &596915166231501638
+--- !u!114 &-6124357202391637148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   muzzles:
   - {fileID: 3126434716683476327}
   bullet: {fileID: 1717896086254242124, guid: c186b5c4f653e3b48a16168fc8915e3d, type: 3}
-  interval: 0.2
+  interval: 0.3
 --- !u!1 &3126434716246752607
 GameObject:
   m_ObjectHideFlags: 0
