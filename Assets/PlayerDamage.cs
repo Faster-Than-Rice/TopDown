@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDamage : MonoBehaviour
+public class PlayerDamage : MonoBehaviour, IDamage
 {
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.name.Contains("Enemy") && collision.gameObject.name.Contains("Bullet"))
-        {
+    int damage;
 
-        }
+    public void Damage(int damageValue)
+    {
+        damage += damageValue;
+        Debug.Log(damage);
     }
 }

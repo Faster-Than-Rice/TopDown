@@ -16,9 +16,9 @@ public class Bullet : MonoBehaviour
     //–½’†ˆ—
     private void OnCollisionEnter(Collision collision)
     {
-        EnemyStatus target = collision.gameObject.GetComponent<EnemyStatus>();
+        IDamage target = collision.gameObject.GetComponent<IDamage>();
         GetComponent<Collider>().enabled = false;
-        if (target)
+        if (target != null)
         {
             target.Damage(damage);
         }

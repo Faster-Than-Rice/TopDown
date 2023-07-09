@@ -57,9 +57,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 5032362366267668215, guid: 87f5ac7c7f4bf7e419442bbf4a234ea1, type: 3}
-  speed: 3000
-  torqueRatio: 5
+  speed: 100000
+  limit: 50
   damage: 5
+  randomValue: 1
+  unLockAngle: 70
 --- !u!54 &737920752331673930
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -69,8 +71,8 @@ Rigidbody:
   m_GameObject: {fileID: 1717896086254242124}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 1
+  m_Drag: 0.1
+  m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0

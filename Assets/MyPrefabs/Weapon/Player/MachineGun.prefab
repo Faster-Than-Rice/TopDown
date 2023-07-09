@@ -136,7 +136,7 @@ MonoBehaviour:
   - {fileID: 3126434716237971156}
   bullet: {fileID: 1717896086254242124, guid: eefb35d48caa15641bea14616dea3bef, type: 3}
   interval: 0.1
-  power: 120
+  power: 200
 --- !u!114 &-3060886494527374277
 MonoBehaviour:
   m_ObjectHideFlags: 0

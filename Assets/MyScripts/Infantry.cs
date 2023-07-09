@@ -13,6 +13,7 @@ public class Infantry : MonoBehaviour, IEnemyState
     NavMeshAgent agent;
     GameObject agentTarget;
     GameObject target;
+    float counter;
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class Infantry : MonoBehaviour, IEnemyState
 
     void Update()
     {
+        counter += Time.deltaTime;
+
         //Aggressiveà⁄çs
         if (state.state == EnemyState.State.Normal)
         {
@@ -55,7 +58,7 @@ public class Infantry : MonoBehaviour, IEnemyState
     void Action()
     {
         if (state.state == EnemyState.State.Aggressive 
-            && (agent.destination == null || Vector3.Distance(transform.position, agent.destination) <= 10))
+            && (agent.destination == null || Vector3.Distance(transform.position, agent.destination) <= 10 || counter >= 3))
         {
             if(Vector3.Distance(transform.position, target.transform.position) <= followingDistance)
             {
@@ -66,6 +69,7 @@ public class Infantry : MonoBehaviour, IEnemyState
                 {
                     agentTarget = pos[Random.Range(0, pos.Count - 1)];
                     agent.SetDestination(agentTarget.transform.position);
+                    counter = 0;
                 }
             }
             else

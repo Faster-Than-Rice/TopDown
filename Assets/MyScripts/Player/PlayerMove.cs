@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
 	{
-		rb.AddForce(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * speed);
+		rb.AddForce(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * speed * Time.deltaTime);
 
 		var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -25,6 +25,6 @@ public class PlayerMove : MonoBehaviour
 		{
 			var lookPoint = ray.GetPoint(distance);
 			transform.LookAt(lookPoint);
-		}
+		}  
 	}
 }

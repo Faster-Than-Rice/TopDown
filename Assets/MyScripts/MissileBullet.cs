@@ -7,17 +7,21 @@ public class MissileBullet : MonoBehaviour
 {
     [SerializeField] GameObject effect;
     [SerializeField] float speed;
-    [SerializeField] float torqueRatio;
+    [SerializeField] float limit;
     [SerializeField] int damage;
+    [SerializeField] float randomValue;
+    [SerializeField] float unLockAngle;
     Rigidbody rb;
     GameObject target;
     bool isFollow = true;
+    bool isHit = false;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * speed * Time.deltaTime, ForceMode.Impulse);
-        Invoke(nameof(Hit), 10);
+        rb.drag = Random.Range(0f, 1f);
+        speed = Random.Range(speed / 2, speed * 2);
+        Invoke(nameof(Hit), 60);
     }
 
     public void SetTarget(GameObject _target)
@@ -26,28 +30,16 @@ public class MissileBullet : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
-        rb.AddForce(speed * Time.deltaTime * transform.forward);
-
-        if (target == null || Vector3.Angle(transform.forward, target.transform.position - transform.position) >= 50)
+    { 
+        if(target == null)
         {
-            isFollow = false;
+            Hit();
         }
-
-        if (isFollow)
+        else if (rb.velocity.magnitude <= limit)
         {
-            var diff = target.transform.position - transform.position;
-            var target_rot = Quaternion.LookRotation(diff);
-            var rot = target_rot * Quaternion.Inverse(transform.rotation);
-            if (rot.w < 0f)
-            {
-                rot.x = -rot.x;
-                rot.y = -rot.y;
-                rot.z = -rot.z;
-                rot.w = -rot.w;
-            }
-            var torque = new Vector3(rot.x, rot.y, rot.z) * torqueRatio;
-            rb.AddTorque(torque);
+            rb.AddForce(speed * Time.deltaTime 
+                * (target.transform.position 
+                + new Vector3(Random.Range(0, randomValue), 0, Random.Range(0, randomValue)) - transform.position).normalized);
         }
     }
 
@@ -55,9 +47,9 @@ public class MissileBullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         GetComponent<Rigidbody>().isKinematic = true;
-        EnemyStatus hit = collision.gameObject.GetComponent<EnemyStatus>();
+        IDamage hit = collision.gameObject.GetComponent<IDamage>();
         GetComponent<Collider>().enabled = false;
-        if (hit)
+        if (hit != null)
         {
             hit.Damage(damage);
         }
