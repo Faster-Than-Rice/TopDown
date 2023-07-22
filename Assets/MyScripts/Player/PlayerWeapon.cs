@@ -17,7 +17,7 @@ public class PlayerWeapon : MonoBehaviour
         weapon = weaponObject.GetComponent<IWeapon>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //ŽËŒ‚
         if (Input.GetMouseButton(0))

@@ -7,6 +7,8 @@ TagManager:
   - FxTemporaire
   - TacticalPoint
   - Enemy
+  - Operator
+  - Canvas
   layers:
   - Default
   - TransparentFX

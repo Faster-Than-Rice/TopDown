@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class Infantry : MonoBehaviour, IEnemyState
 {
     [SerializeField] float followingDistance;
+    [SerializeField] bool isFar;
     EnemyState state = new();
     EnemyStatus status;
     TacticalPositionSearch tacticalPosition;
@@ -67,7 +68,11 @@ public class Infantry : MonoBehaviour, IEnemyState
 
                 if (pos.Count != 0)
                 {
-                    agentTarget = pos[Random.Range(0, pos.Count - 1)];
+                    if (isFar)
+                        agentTarget = pos[0];
+                    else
+                        agentTarget = pos[pos.Count - 1];
+
                     agent.SetDestination(agentTarget.transform.position);
                     counter = 0;
                 }

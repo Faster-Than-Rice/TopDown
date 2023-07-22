@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f0167543b1c905499a8749d6a179a41, type: 2}
+  - {fileID: 2100000, guid: 415106e0810b99c49a85cd385fdf5cc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 0
+  minDistance: 0
 --- !u!114 &1864358789057570224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followingDistance: Infinity
+  isFar: 0
 --- !u!114 &1864358789057570226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +134,9 @@ MonoBehaviour:
   hp: 10
   effect: {fileID: 5032362366267668215, guid: 4cc4026c723fa8e44ae0e0abd496a993, type: 3}
   activeDistance: 100
+  overScreen: {fileID: 1240866070650813740, guid: a96eb735d4a4ddb43a8b81e3c063eede,
+    type: 3}
+  scoreValue: 100
 --- !u!114 &1864358789057570230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2db1ef8bcd35b4aba92f229a5a5397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 3656038613649946788}
+  weapons:
+  - {fileID: 3656038613649946788}
   range: 100
   speed: 0.2
   randomValue: 0
@@ -175,7 +181,7 @@ NavMeshAgent:
   m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 100
-  m_StoppingDistance: 0
+  m_StoppingDistance: 20
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -196,7 +202,7 @@ Rigidbody:
   m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 84
   m_CollisionDetection: 2
 --- !u!1 &3656038613649946788
@@ -250,6 +256,9 @@ MonoBehaviour:
   bullet: {fileID: 1717896086254242124, guid: 07f47c51524f9d34494dcbb028b412f9, type: 3}
   interval: 0.2
   power: 120
+  attackEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5501713759797703641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,7 +530,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.1
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -581,7 +590,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3656038614756323639}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 404c87d872281344cb6a6daf0a21278c, type: 3}
   m_Name: 

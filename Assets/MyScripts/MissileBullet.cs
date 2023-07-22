@@ -13,8 +13,6 @@ public class MissileBullet : MonoBehaviour
     [SerializeField] float unLockAngle;
     Rigidbody rb;
     GameObject target;
-    bool isFollow = true;
-    bool isHit = false;
 
     private void Start()
     {

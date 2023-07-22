@@ -33,27 +33,9 @@ MonoBehaviour:
   m_Name: Global Volume Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 9006835693636350246}
---- !u!114 &4898596197286777248
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83140f56f77e641a693ff5780cc1c06f, type: 3}
-  m_Name: ObjectMotionBlur
-  m_EditorClassIdentifier: 
-  active: 1
-  shutterAngle:
-    m_OverrideState: 1
-    m_Value: 360
-  sampleCount:
-    m_OverrideState: 1
-    m_Value: 32
---- !u!114 &9006835693636350246
+  - {fileID: 1425308763743021057}
+  - {fileID: 2530094006304102415}
+--- !u!114 &1425308763743021057
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,10 +50,10 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.69
+    m_Value: 0.9
   intensity:
     m_OverrideState: 1
-    m_Value: 4.21
+    m_Value: 0.96
   scatter:
     m_OverrideState: 1
     m_Value: 0.7
@@ -94,3 +76,50 @@ MonoBehaviour:
   dirtIntensity:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &2530094006304102415
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  active: 1
+  color:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.456
+  smoothness:
+    m_OverrideState: 1
+    m_Value: 0.2
+  rounded:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &4898596197286777248
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83140f56f77e641a693ff5780cc1c06f, type: 3}
+  m_Name: ObjectMotionBlur
+  m_EditorClassIdentifier: 
+  active: 1
+  shutterAngle:
+    m_OverrideState: 1
+    m_Value: 360
+  sampleCount:
+    m_OverrideState: 1
+    m_Value: 32

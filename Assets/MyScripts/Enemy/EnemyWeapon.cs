@@ -4,33 +4,42 @@ using UnityEngine;
 
 public class EnemyWeapon : MonoBehaviour
 {
-    [SerializeField] GameObject weapon;
+    [SerializeField] List<GameObject> weapons;
     [SerializeField] float range;
     [SerializeField] float speed;
     [SerializeField] float randomValue;
     EnemyStatus status;
-    IWeapon iWeapon;
+    List<IWeapon> iWeapons = new();
     GameObject target;
 
     private void Awake()
     {
         status = GetComponent<EnemyStatus>();
-        iWeapon = weapon.GetComponent<IWeapon>();
+        foreach(GameObject weapon in weapons)
+        {
+            iWeapons.Add(weapon.GetComponent<IWeapon>());
+        }
         target = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void FixedUpdate()
     {
-        LookTarget();
-
         //射撃（射線・射程・角度判定）
         if (Vector3.Distance(target.transform.position, transform.position) <= range
             && Physics.Raycast(transform.position, target.transform.position - transform.position, out RaycastHit hit)
             && hit.collider.gameObject == target
             && Vector3.Angle(transform.forward, target.transform.position - transform.position) <= 30)
         {
-            iWeapon.Attack();
+            foreach(IWeapon weapon in iWeapons)
+            {
+                weapon.Attack();
+            }
         }
+    }
+
+    private void LateUpdate()
+    {
+        LookTarget();
     }
 
     void LookTarget()

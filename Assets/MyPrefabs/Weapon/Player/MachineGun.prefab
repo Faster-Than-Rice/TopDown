@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3126434715197650761}
   - component: {fileID: 3126434715197650760}
   - component: {fileID: -3060886494527374277}
+  - component: {fileID: -2563945357339681745}
   m_Layer: 8
   m_Name: MachineGun
   m_TagString: Untagged
@@ -137,6 +138,21 @@ MonoBehaviour:
   bullet: {fileID: 1717896086254242124, guid: eefb35d48caa15641bea14616dea3bef, type: 3}
   interval: 0.1
   power: 200
+  attackEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2563945357339681745}
+        m_TargetAssemblyTypeName: WeaponShake, Assembly-CSharp
+        m_MethodName: Shake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-3060886494527374277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +261,20 @@ MonoBehaviour:
   optionalScrambleMode: 0
   optionalShakeRandomnessMode: 0
   optionalString: 
+--- !u!114 &-2563945357339681745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3126434715197650758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e51775a7440a3439febd51d902fc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shake: 0.5
+  time: 0.2
 --- !u!1 &3126434716237971157
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3126434716237971157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.38}
   m_LocalScale: {x: 4.4444447, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -384,7 +414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3126434716683476324}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0.38}
   m_LocalScale: {x: 4.4444447, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

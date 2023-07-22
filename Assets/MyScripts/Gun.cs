@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Gun : MonoBehaviour, IWeapon
 {
@@ -8,6 +9,7 @@ public class Gun : MonoBehaviour, IWeapon
     [SerializeField] GameObject bullet;
     [SerializeField] float interval;
     [SerializeField] float power;
+    [SerializeField] UnityEvent attackEvent;
     float counter;
     float nextInterval;
 
@@ -26,6 +28,7 @@ public class Gun : MonoBehaviour, IWeapon
     {
         if (counter >= nextInterval)
         {
+            attackEvent.Invoke();
             foreach(Transform muzzle in muzzles)
             {
                 counter = 0;
