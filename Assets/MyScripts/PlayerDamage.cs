@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
+using DG.Tweening;
 
 public class PlayerDamage : MonoBehaviour, IDamage
 {
@@ -10,6 +11,8 @@ public class PlayerDamage : MonoBehaviour, IDamage
     [SerializeField] Slider bar;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] float recoveryTime;
+    [SerializeField] UnityEvent gameOverEvent;
+    [SerializeField] GameObject fade;
     float hitPoint;
     float recoveryCount;
 
@@ -28,6 +31,11 @@ public class PlayerDamage : MonoBehaviour, IDamage
         bar.value = hitPoint / maxHitPoint;
         recoveryCount = recoveryTime;
         hitPoint = Mathf.Clamp(hitPoint, 0, maxHitPoint);
+
+        if(hitPoint <= 0)
+        {
+            GameOver();
+        }
     }
 
     private void FixedUpdate()
@@ -40,6 +48,13 @@ public class PlayerDamage : MonoBehaviour, IDamage
             text.text = ((hitPoint / maxHitPoint) * 100).ToString("f0") + "%";
             bar.value = hitPoint / maxHitPoint;
         }
+    }
+
+    void GameOver()
+    {
+        Result.score = GetComponent<Score>().scoreCounter;
+        gameOverEvent.Invoke();
+        Invoke(new Action(() => fade.GetComponent<DOTweenAnimation>().DOPlayBackwards()).Method.Name, 2);
     }
 
     void LateUpdate()

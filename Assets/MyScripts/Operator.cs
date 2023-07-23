@@ -37,7 +37,6 @@ public class Operator : MonoBehaviour
                 text.GetComponent<TextMeshProUGUI>().text = dialogues[0];
             }
             dialogues.RemoveAt(0);
-            Debug.Log(interval + f);
             yield return new WaitForSeconds(interval + f);
         }
 

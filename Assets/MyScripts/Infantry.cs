@@ -63,7 +63,7 @@ public class Infantry : MonoBehaviour, IEnemyState
         {
             if(Vector3.Distance(transform.position, target.transform.position) <= followingDistance)
             {
-                List<GameObject> pos = tacticalPosition.Search(target.transform);
+                List<GameObject> pos = new(tacticalPosition.Search(target.transform));
                 pos.RemoveAll(point => point == agentTarget);
 
                 if (pos.Count != 0)

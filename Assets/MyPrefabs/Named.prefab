@@ -323,7 +323,7 @@ MonoBehaviour:
   - {fileID: 1923315676600763445}
   - {fileID: 3880830391766231954}
   - {fileID: 3923721835715915223}
-  range: 100
+  range: 500
   speed: 0.02
   randomValue: 0
 --- !u!65 &1864358789057570238

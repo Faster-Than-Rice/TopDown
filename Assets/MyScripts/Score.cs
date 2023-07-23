@@ -9,7 +9,11 @@ public class Score : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] UnityEvent scoreEvent;
     [SerializeField] OperateDialogue dialogue;
-    int scoreCounter;
+    public int scoreCounter
+    {
+        get;
+        private set;
+    }
     Combo combo;
 
     private void Start()
