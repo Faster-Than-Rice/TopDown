@@ -10,13 +10,16 @@ public class Gun : MonoBehaviour, IWeapon
     [SerializeField] float interval;
     [SerializeField] float power;
     [SerializeField] UnityEvent attackEvent;
+    [SerializeField] AudioClip clip;
     float counter;
     float nextInterval;
+    AudioSource source;
 
     private void Start()
     {
         nextInterval = interval;
         counter = nextInterval;
+        source = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -31,6 +34,7 @@ public class Gun : MonoBehaviour, IWeapon
             attackEvent.Invoke();
             foreach(Transform muzzle in muzzles)
             {
+                source.PlayOneShot(clip);
                 counter = 0;
                 nextInterval = Random.Range(interval / 1.05f, interval * 1.05f);
                 GameObject _bullet = Instantiate(bullet, muzzle.position, Quaternion.Euler(Vector3.forward));

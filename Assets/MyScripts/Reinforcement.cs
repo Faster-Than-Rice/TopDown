@@ -10,19 +10,26 @@ public class Reinforcement : MonoBehaviour
     [SerializeField] int max;
     [SerializeField] int condition;
     List<GameObject> units = new();
+    bool isOrder = false;
 
     private void Start()
     {
-        Order(Random.Range(min, max));
+        isOrder = true;
+        StartCoroutine(Order(Random.Range(min, max)));
     }
 
-    public void Order(int number)
+    public IEnumerator Order(int number)
     {
+        yield return new WaitForSeconds(1);
+
         for(int counter = 0;counter <= number; counter++)
         {
-            units.Add(Instantiate(unitObject, transform.position, Quaternion.identity));
+            units.Add(Instantiate(unitObject, transform.position 
+                + new Vector3(Random.Range(0, 5), 0, Random.Range(0, 5)), Quaternion.identity));
             Instantiate(effect, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.1f);
         }
+        isOrder = false;
     }
 
     private void FixedUpdate()
@@ -35,9 +42,10 @@ public class Reinforcement : MonoBehaviour
             }
         }
 
-        if(units.Count <= condition)
+        if(units.Count <= condition && !isOrder)
         {
-            Order(Random.Range(min, max));
+            StartCoroutine(Order(Random.Range(min, max)));
+            isOrder = true;
         }
     }
 }

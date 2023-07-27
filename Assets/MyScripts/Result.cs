@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using unityroom.Api;
 
 public class Result : MonoBehaviour
 {
@@ -11,31 +12,36 @@ public class Result : MonoBehaviour
 
     private void Start()
     {
+        UnityroomApiClient.Instance.SendScore(1, score, ScoreboardWriteMode.HighScoreDesc);
         scoreText.text = score.ToString();
 
-        if(score <= 5000)
+        if(score <= 0)
         {
             rankText.text = "Beginner";
         }
-        else if(score <= 10000)
+        else if(score <= 50000)
         {
-            rankText.text = "Ordinaly";
+            rankText.text = "Intermediate";
         }
-        else if(score <= 20000)
+        else if(score <= 75000)
+        {
+            rankText.text = "Advanced";
+        }
+        else if(score <= 100000)
         {
             rankText.text = "Expert";
         }
-        else if(score <= 40000)
+        else if(score <= 1500000)
         {
             rankText.text = "Ace";
         }
-        else if(score <= 50000)
+        else if(score <= 200000)
         {
             rankText.text = "Legend";
         }
         else
         {
-            rankText.text = "";
+            rankText.text = "The One-Man Army";
         }
     }
 }

@@ -7,7 +7,6 @@ public class EnemyStatus : MonoBehaviour, IDamage
 {
     public int hp;
     public GameObject effect;
-    public float activeDistance;
     [SerializeField] GameObject overScreen;
     [SerializeField] int scoreValue;
     GameObject instance;

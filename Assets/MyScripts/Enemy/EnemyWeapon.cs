@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyWeapon : MonoBehaviour
 {
     [SerializeField] List<GameObject> weapons;
+    [SerializeField] LayerMask mask;
     [SerializeField] float range;
     [SerializeField] float speed;
     [SerializeField] float randomValue;
@@ -26,7 +27,7 @@ public class EnemyWeapon : MonoBehaviour
     {
         //射撃（射線・射程・角度判定）
         if (Vector3.Distance(target.transform.position, transform.position) <= range
-            && Physics.Raycast(transform.position, target.transform.position - transform.position, out RaycastHit hit)
+            && Physics.Raycast(transform.position, target.transform.position - transform.position, out RaycastHit hit, mask)
             && hit.collider.gameObject == target
             && Vector3.Angle(transform.forward, target.transform.position - transform.position) <= 30)
         {

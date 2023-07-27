@@ -8,11 +8,14 @@ public class Missile : MonoBehaviour, IWeapon
     [SerializeField] Transform[] muzzles;
     [SerializeField] GameObject bullet;
     [SerializeField] float interval;
+    [SerializeField] AudioClip clip;
     float counter;
+    AudioSource source;
 
     private void Start()
     {
         counter = interval;
+        source = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -28,6 +31,7 @@ public class Missile : MonoBehaviour, IWeapon
             {
                 counter = 0;
                 GameObject instance = Instantiate(bullet, muzzle.position, muzzle.rotation);
+                source.PlayOneShot(clip);
 
                 if (transform.root.CompareTag("Player"))
                 {

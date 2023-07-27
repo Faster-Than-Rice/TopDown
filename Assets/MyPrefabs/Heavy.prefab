@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c9819e768dfc449bb2b103e7e9c5c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 50
+  hp: 25
   effect: {fileID: 5032362366267668215, guid: 4cc4026c723fa8e44ae0e0abd496a993, type: 3}
   activeDistance: 100
   overScreen: {fileID: 1240866070650813740, guid: a96eb735d4a4ddb43a8b81e3c063eede,
@@ -151,8 +151,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 3656038613649946788}
-  range: 100
-  speed: 0.2
+  mask:
+    serializedVersion: 2
+    m_Bits: 319
+  range: Infinity
+  speed: 0.05
   randomValue: 0
 --- !u!65 &1864358789057570238
 BoxCollider:
@@ -177,7 +180,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 15
+  m_Speed: 30
   m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -212,10 +215,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864358789057570235}
     m_Modifications:
+    - target: {fileID: 5483705602370618022, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.44
+      objectReference: {fileID: 0}
     - target: {fileID: 5483705603475950388, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
         type: 3}
       propertyPath: m_Name
       value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483705603475950394, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
+        type: 3}
+      propertyPath: interval
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5483705603475950395, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
         type: 3}
@@ -270,6 +283,31 @@ PrefabInstance:
     - target: {fileID: 5483705603475950395, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483705603877715793, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483705603877715793, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483705603877715793, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085994505832378, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
+        type: 3}
+      propertyPath: m_Positions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492085994505832378, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
+        type: 3}
+      propertyPath: m_Positions.Array.data[1].z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -58,7 +58,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect: {fileID: 5032362366267668215, guid: 0b81823150935fe4d81185a5491135e2, type: 3}
   speed: 20000
+  limit: 100
   damage: 5
+  randomValue: 0
+  unLockAngle: 50
 --- !u!54 &737920752331673930
 Rigidbody:
   m_ObjectHideFlags: 0
