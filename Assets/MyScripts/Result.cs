@@ -23,19 +23,19 @@ public class Result : MonoBehaviour
         {
             rankText.text = "Intermediate";
         }
-        else if(score <= 75000)
+        else if(score <= 100000)
         {
             rankText.text = "Advanced";
         }
-        else if(score <= 100000)
+        else if(score <= 200000)
         {
             rankText.text = "Expert";
         }
-        else if(score <= 1500000)
+        else if(score <= 300000)
         {
             rankText.text = "Ace";
         }
-        else if(score <= 200000)
+        else if(score <= 400000)
         {
             rankText.text = "Legend";
         }

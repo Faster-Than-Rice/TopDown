@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.UI;
 
 public class FadeScene : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class FadeScene : MonoBehaviour
     public void Load(int sceneNumber)
     {
         StartCoroutine(Scene(sceneNumber));
+        GetComponent<Image>().raycastTarget = true;
     }
 
     IEnumerator Scene(int sceneNumber)

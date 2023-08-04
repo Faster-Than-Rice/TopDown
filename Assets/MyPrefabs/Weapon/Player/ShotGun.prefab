@@ -88,7 +88,7 @@ MonoBehaviour:
   - {fileID: 572299994925232572}
   bullet: {fileID: 1717896086254242124, guid: eefb35d48caa15641bea14616dea3bef, type: 3}
   interval: 0.3
-  power: 100
+  power: 150
   attackEvent:
     m_PersistentCalls:
       m_Calls:

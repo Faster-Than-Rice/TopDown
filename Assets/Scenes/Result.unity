@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 79939268}
   - component: {fileID: 79939272}
   - component: {fileID: 79939273}
+  - component: {fileID: 79939274}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Canvas
@@ -457,6 +458,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &79939274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79939267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c870b5691522b324c94cc510201fba83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockMode: 2
+  isHide: 1
 --- !u!224 &148704694 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2794980476306533290, guid: 104923514f2861945bbf1f2be95368fc,
@@ -603,7 +618,7 @@ AudioSource:
   m_GameObject: {fileID: 330585543}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -4778794036402683503, guid: 11a9fc8f028aa8d47abe97bd435d00e2,
+  OutputAudioMixerGroup: {fileID: -5515142127845542792, guid: 11a9fc8f028aa8d47abe97bd435d00e2,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 0085d4f3962448c4bb67bb614bc6970a, type: 3}
   m_PlayOnAwake: 1
@@ -749,7 +764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1234567890
+  m_text: 62000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcdcb460b176ed84b9702c6a7ae60cb6, type: 2}
   m_sharedMaterial: {fileID: -2291230197863804053, guid: fcdcb460b176ed84b9702c6a7ae60cb6,
@@ -1600,7 +1615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The One-Man Army
+  m_text: Advanced
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fcdcb460b176ed84b9702c6a7ae60cb6, type: 2}
   m_sharedMaterial: {fileID: -2291230197863804053, guid: fcdcb460b176ed84b9702c6a7ae60cb6,
