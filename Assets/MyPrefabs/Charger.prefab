@@ -133,7 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   effect: {fileID: 5032362366267668215, guid: 4cc4026c723fa8e44ae0e0abd496a993, type: 3}
-  activeDistance: 100
   overScreen: {fileID: 1240866070650813740, guid: a96eb735d4a4ddb43a8b81e3c063eede,
     type: 3}
   scoreValue: 300
@@ -186,7 +185,7 @@ NavMeshAgent:
   m_AngularSpeed: 100
   m_StoppingDistance: 20
   m_AutoTraverseOffMeshLink: 0
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5

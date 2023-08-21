@@ -1741,7 +1741,7 @@ Transform:
   m_GameObject: {fileID: 117944782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.022382537, y: 0.9130397, z: 0.019789772}
-  m_LocalScale: {x: 0.27687547, y: 4.031575, z: 0.024699867}
+  m_LocalScale: {x: 0.27687547, y: 10, z: 0.024699867}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -1838,7 +1838,7 @@ Transform:
   m_GameObject: {fileID: 119035890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.05788295, y: 0.9130397, z: 0.3636119}
-  m_LocalScale: {x: 0.27687547, y: 4.031575, z: 0.024699867}
+  m_LocalScale: {x: 0.27687547, y: 10, z: 0.024699867}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -6392,6 +6392,10 @@ MonoBehaviour:
   min: 2
   max: 10
   condition: 0
+  spawnCount: Infinity
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &402440487
 Transform:
   m_ObjectHideFlags: 0
@@ -10135,7 +10139,7 @@ Transform:
   m_GameObject: {fileID: 697646231}
   m_LocalRotation: {x: -0, y: 0.70906335, z: -0, w: 0.7051449}
   m_LocalPosition: {x: -1, y: 1, z: 0}
-  m_LocalScale: {x: 1.025, y: 4.031575, z: 1.15}
+  m_LocalScale: {x: 1.025, y: 10, z: 1.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -11151,7 +11155,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 1
-  duration: 1
+  duration: 0.5
   easeType: 7
   easeCurve:
     serializedVersion: 2
@@ -11716,6 +11720,106 @@ Transform:
   m_Father: {fileID: 1486569736}
   m_RootOrder: 180
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &784062536
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1318767127}
+    m_Modifications:
+    - target: {fileID: 2272176730766637121, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637121, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637121, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637122, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2272176730766637124, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+        type: 3}
+      propertyPath: m_Name
+      value: BackEffect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f91f4a1b97d45549acf12e70b5e9069, type: 3}
+--- !u!4 &784062537 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2272176730766637123, guid: 7f91f4a1b97d45549acf12e70b5e9069,
+    type: 3}
+  m_PrefabInstance: {fileID: 784062536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &784891564
 GameObject:
   m_ObjectHideFlags: 0
@@ -12327,7 +12431,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 1
-  duration: 1
+  duration: 0.75
   easeType: 22
   easeCurve:
     serializedVersion: 2
@@ -12877,8 +12981,8 @@ MonoBehaviour:
   targetIsSelf: 1
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
-  delay: 0.5
-  duration: 1
+  delay: 1
+  duration: 0.5
   easeType: 7
   easeCurve:
     serializedVersion: 2
@@ -13033,7 +13137,7 @@ MonoBehaviour:
   targetIsSelf: 1
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
-  delay: 2.5
+  delay: 2
   duration: 1
   easeType: 7
   easeCurve:
@@ -13124,7 +13228,7 @@ Transform:
   m_GameObject: {fileID: 844452870}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.00000002161, y: -2.79, z: -0.006}
-  m_LocalScale: {x: 1.0528057, y: 4.031575, z: 1.1875}
+  m_LocalScale: {x: 1.0528057, y: 10, z: 1.1875}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -13291,6 +13395,10 @@ MonoBehaviour:
   min: 2
   max: 10
   condition: 0
+  spawnCount: Infinity
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &847087433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14051,69 +14159,10 @@ MonoBehaviour:
   bar: {fileID: 2105126163}
   text: {fileID: 1121257926}
   recoveryTime: 3
-  gameOverEvent:
+  destroyedEffect: {fileID: 1435574795}
+  destroyedEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1435574795}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 883124866}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 883124864}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2079132095}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 445644773}
-        m_TargetAssemblyTypeName: FadeScene, Assembly-CSharp
-        m_MethodName: Load
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 883124873}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
@@ -14125,18 +14174,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 883124875}
-        m_TargetAssemblyTypeName: AudioMute, Assembly-CSharp
-        m_MethodName: Mute
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
   fade: {fileID: 130954446}
 --- !u!114 &883124871
@@ -14185,7 +14222,6 @@ MonoBehaviour:
   scoreEvent:
     m_PersistentCalls:
       m_Calls: []
-  dialogue: {fileID: 11400000, guid: bf39790b3e2631144972c38f94f9f771, type: 2}
 --- !u!114 &883124873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14198,84 +14234,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43d29df2111670468f5b543236039ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitTime: 120
+  limitTime: 10
   counterText: {fileID: 848486894}
-  fade: {fileID: 130954446}
+  clearEffect: {fileID: 1655290136}
   clearEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1655290136}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2079132095}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 883124870}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 445644773}
-        m_TargetAssemblyTypeName: FadeScene, Assembly-CSharp
-        m_MethodName: Load
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 883124872}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 883124875}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!81 &883124874
 AudioListener:
   m_ObjectHideFlags: 0
@@ -15954,7 +15918,7 @@ Transform:
   m_GameObject: {fileID: 979769831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.13151562, y: 0.9130397, z: -0.14026536}
-  m_LocalScale: {x: 0.27687547, y: 4.031575, z: 0.024699867}
+  m_LocalScale: {x: 0.27687547, y: 10, z: 0.024699867}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -17392,6 +17356,10 @@ MonoBehaviour:
   min: 2
   max: 10
   condition: 0
+  spawnCount: Infinity
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1077877738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18475,6 +18443,10 @@ MonoBehaviour:
   min: 2
   max: 10
   condition: 0
+  spawnCount: Infinity
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1146246248
 Transform:
   m_ObjectHideFlags: 0
@@ -19288,7 +19260,7 @@ MonoBehaviour:
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
-  hasOnComplete: 0
+  hasOnComplete: 1
   hasOnTweenCreated: 0
   hasOnRewind: 0
   onStart:
@@ -19318,7 +19290,19 @@ MonoBehaviour:
       m_Calls: []
   onComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 445644773}
+        m_TargetAssemblyTypeName: FadeScene, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: Result
+          m_BoolArgument: 0
+        m_CallState: 2
   onTweenCreated:
     m_PersistentCalls:
       m_Calls: []
@@ -19328,8 +19312,8 @@ MonoBehaviour:
   targetIsSelf: 1
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
-  delay: 1.5
-  duration: 1
+  delay: 1
+  duration: 0.75
   easeType: 22
   easeCurve:
     serializedVersion: 2
@@ -19974,7 +19958,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.14
+  m_Intensity: 0.25
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -20803,7 +20787,7 @@ MonoBehaviour:
   hasOnPlay: 0
   hasOnUpdate: 0
   hasOnStepComplete: 0
-  hasOnComplete: 0
+  hasOnComplete: 1
   hasOnTweenCreated: 0
   hasOnRewind: 0
   onStart:
@@ -20833,7 +20817,19 @@ MonoBehaviour:
       m_Calls: []
   onComplete:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 445644773}
+        m_TargetAssemblyTypeName: FadeScene, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Result
+          m_BoolArgument: 0
+        m_CallState: 2
   onTweenCreated:
     m_PersistentCalls:
       m_Calls: []
@@ -20843,8 +20839,8 @@ MonoBehaviour:
   targetIsSelf: 1
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
-  delay: 1.5
-  duration: 1
+  delay: 1
+  duration: 0.75
   easeType: 22
   easeCurve:
     serializedVersion: 2
@@ -21291,7 +21287,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318767123}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -21342,7 +21338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318767123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.9, y: -0.13236094, z: 13}
+  m_LocalPosition: {x: 49.9, y: -3.11, z: 13}
   m_LocalScale: {x: 529.571, y: 1.24021, z: 404.86047}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21358,6 +21354,7 @@ Transform:
   - {fileID: 1420290775}
   - {fileID: 1993180696}
   - {fileID: 844452871}
+  - {fileID: 784062537}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22846,7 +22843,7 @@ Transform:
   m_GameObject: {fileID: 1420290774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.28731397, y: 0.9130397, z: 0.13242115}
-  m_LocalScale: {x: 0.27687547, y: 4.031575, z: 0.024699867}
+  m_LocalScale: {x: 0.27687547, y: 10, z: 0.024699867}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -23025,7 +23022,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 1
-  duration: 1
+  duration: 0.5
   easeType: 7
   easeCurve:
     serializedVersion: 2
@@ -26245,7 +26242,7 @@ Transform:
   m_GameObject: {fileID: 1549433405}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -1}
-  m_LocalScale: {x: 2.16, y: 4.031575, z: 1}
+  m_LocalScale: {x: 2.16, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -27063,6 +27060,10 @@ MonoBehaviour:
   min: 1
   max: 2
   condition: 0
+  spawnCount: Infinity
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1594992538
 Transform:
   m_ObjectHideFlags: 0
@@ -29714,6 +29715,10 @@ MonoBehaviour:
   min: 1
   max: 4
   condition: 0
+  spawnCount: Infinity
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1777820055
 Transform:
   m_ObjectHideFlags: 0
@@ -30346,7 +30351,7 @@ Transform:
   m_GameObject: {fileID: 1822234577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.097915374, y: 0.9130397, z: -0.37145615}
-  m_LocalScale: {x: 0.27687547, y: 4.031575, z: 0.024699867}
+  m_LocalScale: {x: 0.27687547, y: 10, z: 0.024699867}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -30860,7 +30865,7 @@ Transform:
   m_GameObject: {fileID: 1836916360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 1}
-  m_LocalScale: {x: 2.16, y: 4.031575, z: 1}
+  m_LocalScale: {x: 2.16, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -31676,7 +31681,7 @@ Transform:
   m_GameObject: {fileID: 1890751383}
   m_LocalRotation: {x: -0, y: 0.70906335, z: -0, w: 0.7051449}
   m_LocalPosition: {x: 1, y: 1, z: 0}
-  m_LocalScale: {x: 1.025, y: 4.031575, z: 1.15}
+  m_LocalScale: {x: 1.025, y: 10, z: 1.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -33056,7 +33061,7 @@ Transform:
   m_GameObject: {fileID: 1993180695}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.2708737, y: 0.9130397, z: 0.20602676}
-  m_LocalScale: {x: 0.27687547, y: 4.031575, z: 0.024699867}
+  m_LocalScale: {x: 0.27687547, y: 10, z: 0.024699867}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -33153,7 +33158,7 @@ Transform:
   m_GameObject: {fileID: 1996147239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.25181356, y: 0.9130397, z: -0.211401}
-  m_LocalScale: {x: 0.27687547, y: 4.031575, z: 0.024699867}
+  m_LocalScale: {x: 0.27687547, y: 10, z: 0.024699867}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318767127}
@@ -33923,6 +33928,10 @@ MonoBehaviour:
   min: 2
   max: 5
   condition: 0
+  spawnCount: Infinity
+  endEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2054396234
 GameObject:
   m_ObjectHideFlags: 0
@@ -34303,8 +34312,8 @@ MonoBehaviour:
   targetIsSelf: 1
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
-  delay: 3
-  duration: 2
+  delay: 2
+  duration: 1
   easeType: 22
   easeCurve:
     serializedVersion: 2

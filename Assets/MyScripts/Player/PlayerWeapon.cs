@@ -17,7 +17,7 @@ public class PlayerWeapon : MonoBehaviour
         weapon = weaponObject.GetComponent<IWeapon>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         //ŽËŒ‚
         if (Input.GetMouseButton(0))
@@ -26,23 +26,12 @@ public class PlayerWeapon : MonoBehaviour
         }
 
         //•‘••ÏX
-        if(Input.GetAxisRaw("Mouse ScrollWheel") != 0)
+        if(Input.GetMouseButtonDown(1))
         {
-            if (Mathf.Sign(Input.GetAxisRaw("Mouse ScrollWheel")) == 1)
+            changeNumber++;
+            if(changeNumber > weapons.Length)
             {
-                changeNumber++;
-                if(changeNumber > weapons.Length)
-                {
-                    changeNumber = 1;
-                }
-            }
-            else 
-            {
-                changeNumber--;
-                if (changeNumber < 1)
-                {
-                    changeNumber = weapons.Length;
-                }
+                changeNumber = 1;
             }
             Destroy(weaponObject);
             weaponObject = Instantiate(weapons[changeNumber - 1], transform.position, Quaternion.identity);

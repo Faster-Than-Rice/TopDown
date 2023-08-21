@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bdea9300c3abe4b838332bd4f331a3, type: 3}
+  m_Name: ScoreAttack
+  m_EditorClassIdentifier: 
+  missionNumber: EX
+  missionName: "\u5BFE\u591A\u6570\u4EEE\u60F3\u6226\u95D8\u6F14\u7FD2"
+  missionTarget: "\u6575\u306E\u6483\u7834"
+  missionTime: "2\u520600\u79D2"
+  missionThreat: "\u8A13\u7DF4"
+  message: "\u4EEE\u60F3\u7A7A\u9593\u4E0A\u3067\u306E\u6226\u95D8\u6F14\u7FD2\u3067\u3059\n\u53EF\u80FD\u306A\u9650\u308A\u591A\u304F\u306E\u6575\u3092\u6483\u7834\u3057\u3066\u304F\u3060\u3055\u3044\n\n\u30AA\u30DA\u30EC\u30FC\u30BF\u30FC"
+  date: '-'

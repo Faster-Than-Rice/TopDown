@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453a36c4d0dc7e74bb2ffb0ab1826cfc, type: 3}
+  m_Name: Event1
+  m_EditorClassIdentifier: 
+  dialogues:
+  - "Operator\uFF1A\u6575\u304C\u51FA\u73FE"
+  - "Operator\uFF1A\u6483\u7834\u3057\u3066\u304F\u3060\u3055\u3044"

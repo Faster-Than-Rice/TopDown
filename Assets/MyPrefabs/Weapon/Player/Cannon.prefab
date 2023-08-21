@@ -51,7 +51,7 @@ MonoBehaviour:
   muzzles:
   - {fileID: 3126434716683476327}
   bullet: {fileID: 1717896086254242124, guid: 7af50a75e0f48914280b88f09d37fbf0, type: 3}
-  interval: 1
+  interval: 0.5
   power: 20000
   attackEvent:
     m_PersistentCalls:
@@ -68,7 +68,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  clip: {fileID: 8300000, guid: 109c8d300d384e543954202fa8eb21be, type: 3}
+  clip: {fileID: 8300000, guid: 63bddd53d961be944b153b8ad6b02cdb, type: 3}
 --- !u!114 &-177617098929354640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e51775a7440a3439febd51d902fc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shake: 2
-  time: 0.2
+  shake: 1
+  time: 0.3
 --- !u!82 &8427459282479429196
 AudioSource:
   m_ObjectHideFlags: 0
@@ -205,7 +205,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.5
-  m_Pitch: 1.23
+  m_Pitch: 0.76
   Loop: 0
   Mute: 0
   Spatialize: 0
