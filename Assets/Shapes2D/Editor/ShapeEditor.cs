@@ -885,7 +885,6 @@
             
             EditorGUI.BeginDisabledGroup(Selection.objects.Length != 1);
             if (GUILayout.Button("Convert to Sprite"))
-                ConvertToSprite(shape);
             EditorGUI.EndDisabledGroup();
             
             EditorGUI.EndDisabledGroup();

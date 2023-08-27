@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class Operator : MonoBehaviour
 {
     [SerializeField] GameObject textObject;
+    [SerializeField] string eventTrigger;
     [SerializeField] float interval;
     List<string> dialogues = new();
+    [SerializeField] UnityEvent dialogueEvent;
     bool isPut = false;
 
     public void SetDialogues(OperateDialogue dialogue)
@@ -34,14 +37,22 @@ public class Operator : MonoBehaviour
 
         while(dialogues.Count != 0)
         {
-            if(!float.TryParse(dialogues[0], out float f))
+            if(dialogues[0] == eventTrigger)
             {
-                GameObject text = Instantiate(textObject, transform.position, Quaternion.identity);
-                text.transform.SetParent(transform);
-                text.GetComponent<TextMeshProUGUI>().text = dialogues[0];
+                dialogueEvent.Invoke();
+                dialogues.RemoveAt(0);
             }
-            dialogues.RemoveAt(0);
-            yield return new WaitForSeconds(interval + f);
+            else
+            {
+                if (!float.TryParse(dialogues[0], out float f))
+                {
+                    GameObject text = Instantiate(textObject, transform.position, Quaternion.identity);
+                    text.transform.SetParent(transform);
+                    text.GetComponent<TextMeshProUGUI>().text = dialogues[0];
+                }
+                dialogues.RemoveAt(0);
+                yield return new WaitForSeconds(interval + f);
+            }
         }
 
         isPut = false;

@@ -9,6 +9,9 @@ public class FadeScene : MonoBehaviour
 {
     [SerializeField] float delay;
     [SerializeField] DOTweenAnimation fadeAnimation;
+    [SerializeField] Image progressBar;
+    [SerializeField] GameObject progress;
+    AsyncOperation async;
 
     public void Load(string sceneName)
     {
@@ -19,8 +22,10 @@ public class FadeScene : MonoBehaviour
 
     IEnumerator Scene(string sceneName)
     {
+        progress.SetActive(true);
+
         yield return new WaitForSeconds(delay);
 
-        SceneManager.LoadScene(sceneName);
+        async = SceneManager.LoadSceneAsync(sceneName);
     }
 }
