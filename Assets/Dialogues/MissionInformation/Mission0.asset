@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mission0
   m_EditorClassIdentifier: 
   missionNumber: 0
-  missionName: "\u3042\u308B\u65E5\u306E\u8A13\u7DF4"
+  missionName: "\u6700\u7D42\u8A66\u9A13"
   missionTarget: "\u76EE\u6A19\u5730\u70B9\u3078\u306E\u5230\u9054"
-  missionTime: "5\u520600\u79D2"
+  missionTime: "2\u520600\u79D2"
   missionThreat: "\u4F4E"
-  message: "\u304A\u306F\u3088\u3046\u3054\u3056\u3044\u307E\u3059\n\u4ECA\u65E5\u3082\u9811\u5F35\u308A\u307E\u3057\u3087\u3046\n\n\u8A13\u7DF4\u5B98"
-  date: 
+  message: This is Message
+  date: '-'

@@ -45,4 +45,12 @@ public class OverScreen : MonoBehaviour
             icon.rectTransform.anchoredPosition = Rect.NormalizedToPoint(canvasRect, viewport);
         }
     }
+
+    private void LateUpdate()
+    {
+        if (target == null)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

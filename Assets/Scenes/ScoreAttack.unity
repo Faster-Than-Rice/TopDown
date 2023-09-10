@@ -1157,8 +1157,8 @@ RectTransform:
   - {fileID: 75862635}
   - {fileID: 1435574796}
   - {fileID: 1655290137}
-  - {fileID: 2079132096}
   - {fileID: 1486299785}
+  - {fileID: 2079132096}
   - {fileID: 445644772}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -14155,7 +14155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6fc46b14444674f9c2fffa9c6671c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoint: 300
+  maxHitPoint: 100
   bar: {fileID: 2105126163}
   text: {fileID: 1121257926}
   recoveryTime: 3
@@ -14234,7 +14234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43d29df2111670468f5b543236039ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitTime: 10
+  limitTime: 120
   counterText: {fileID: 848486894}
   clearEffect: {fileID: 1655290136}
   clearEvent:
@@ -20295,7 +20295,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textObject: {fileID: 7881811566148618989, guid: 4d55c56e55d81684f8289e508a4987ca,
     type: 3}
+  eventTrigger: 
   interval: 4
+  dialogueEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1253314863
 GameObject:
   m_ObjectHideFlags: 0
@@ -24143,7 +24147,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 79939271}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -34248,7 +34252,7 @@ RectTransform:
   - {fileID: 1251269036}
   - {fileID: 2105126162}
   m_Father: {fileID: 79939271}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

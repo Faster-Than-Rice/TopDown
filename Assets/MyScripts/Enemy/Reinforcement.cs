@@ -7,6 +7,7 @@ public class Reinforcement : MonoBehaviour
 {
     [SerializeField] GameObject unitObject;
     [SerializeField] GameObject effect;
+    [SerializeField] float delay = 0.5f;
     [SerializeField] int min;
     [SerializeField] int max;
     [SerializeField] int condition;
@@ -24,9 +25,8 @@ public class Reinforcement : MonoBehaviour
 
     public IEnumerator Order(int number)
     {
-        yield return new WaitForSeconds(1);
-
-        for(int counter = 0;counter <= number; counter++)
+        yield return new WaitForSeconds(delay);
+        for (int counter = 0;counter < number; counter++)
         {
             units.Add(Instantiate(unitObject, transform.position 
                 + new Vector3(Random.Range(0, 5), 0, Random.Range(0, 5)), Quaternion.identity));

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TalkToggle : MonoBehaviour
 {
-    [SerializeField] GameObject talker;
     [SerializeField] List<Toggle> toggles;
 
     public void Set(bool active)

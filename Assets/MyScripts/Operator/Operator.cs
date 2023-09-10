@@ -46,8 +46,9 @@ public class Operator : MonoBehaviour
             {
                 if (!float.TryParse(dialogues[0], out float f))
                 {
-                    GameObject text = Instantiate(textObject, transform.position, Quaternion.identity);
-                    text.transform.SetParent(transform);
+                    GameObject text = Instantiate(textObject, transform.localPosition, Quaternion.identity);
+                    text.transform.SetParent(transform, false);
+                    text.transform.localPosition = Vector3.zero;
                     text.GetComponent<TextMeshProUGUI>().text = dialogues[0];
                 }
                 dialogues.RemoveAt(0);

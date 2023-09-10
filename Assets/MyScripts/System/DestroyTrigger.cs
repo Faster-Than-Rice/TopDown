@@ -5,8 +5,11 @@ using UnityEngine.Events;
 
 public class DestroyTrigger : MonoBehaviour
 {
+    [SerializeField] AreaSensor sensor;
     [SerializeField] List<GameObject> objects;
     [SerializeField] UnityEvent destroyEvent;
+    [SerializeField] UnityEvent destroySensingEvent;
+    bool isDestory = false;
 
     private void FixedUpdate()
     {
@@ -16,9 +19,17 @@ public class DestroyTrigger : MonoBehaviour
             {
                 objects.RemoveAt(counter);
 
-                if (objects.Count == 0)
+                if (objects.Count == 0 && !isDestory)
                 {
-                    destroyEvent.Invoke();
+                    isDestory = true;
+                    if(sensor && sensor.GetValue())
+                    {
+                        destroySensingEvent.Invoke();
+                    }
+                    else
+                    {
+                        destroyEvent.Invoke();
+                    }
                     Destroy(gameObject);
                 }
             }

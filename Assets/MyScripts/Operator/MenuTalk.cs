@@ -8,52 +8,66 @@ using DG.Tweening;
 public class MenuTalk : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI text;
-    [SerializeField] float interval;
     [SerializeField] string eventTrigger;
+    [SerializeField] float clickDelay;
+    [SerializeField] float firstDelay;
+    [SerializeField] float textSpeed;
+    [SerializeField] GameObject panel;
+    [SerializeField] OperateDialogue firstDialogue;
     [SerializeField] UnityEvent dialogueEvent;
-    [SerializeField] AudioClip clip;
-    DOTweenAnimation tween;
-    AudioSource source;
     List<string> talkDialogue = new();
+    DOTweenAnimation tween;
+    float clickCounter;
+    float delay;
 
     private void Start()
     {
-        tween = text.GetComponent<DOTweenAnimation>();
-        source = GetComponent<AudioSource>();
+        tween = GetComponent<DOTweenAnimation>();
+        if (firstDialogue != null)
+        {
+            Talk(firstDialogue);
+            delay = talkDialogue[0].Length * textSpeed;
+            text.DOText(talkDialogue[0], delay).SetEase(Ease.Linear).SetDelay(firstDelay);
+            talkDialogue.RemoveAt(0);
+            delay = talkDialogue[0].Length * textSpeed;
+        }
     }
 
     public void Talk(OperateDialogue dialogue)
     {
+        tween.DOPlayForward();
+        panel.SetActive(true);
         foreach(string _text in dialogue.GetDialogue())
         {
             talkDialogue.Add(_text);
         }
-      
-        StartCoroutine(nameof(Put));
+        delay = talkDialogue[0].Length * textSpeed;
+        text.DOText(talkDialogue[0], delay).SetEase(Ease.Linear);
+        talkDialogue.RemoveAt(0);
+        clickCounter = 0;
     }
 
-    IEnumerator Put()
+    void Update()
     {
-        yield return new WaitForSeconds(0.5f);
-        while(talkDialogue.Count != 0)
+        clickCounter += Time.deltaTime;
+    }
+
+    public void Click()
+    {
+        if (clickCounter >= delay)
         {
-            if(talkDialogue[0] == eventTrigger)
+            clickCounter = 0;
+            text.text = "";
+
+            if (talkDialogue[0] == eventTrigger)
             {
                 dialogueEvent.Invoke();
                 talkDialogue.RemoveAt(0);
-                continue;
+                return;
             }
-
-            float delay = talkDialogue[0].Length * 0.1f;
+            delay = talkDialogue[0].Length * textSpeed;
             text.DOText(talkDialogue[0], delay).SetEase(Ease.Linear);
-            source.PlayOneShot(clip);
             talkDialogue.RemoveAt(0);
-
-            yield return new WaitForSeconds(delay + interval / 2);
-
-            text.text = "";
-
-            yield return new WaitForSeconds(interval / 2);
         }
     }
 }

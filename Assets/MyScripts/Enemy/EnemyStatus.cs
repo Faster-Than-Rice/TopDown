@@ -17,8 +17,8 @@ public class EnemyStatus : MonoBehaviour, IDamage
     {
         combo = GameObject.FindGameObjectWithTag("Player").GetComponent<Combo>();
         score = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
-        instance = Instantiate(overScreen, transform.position, Quaternion.identity);
-        instance.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
+        instance = Instantiate(overScreen, GameObject.FindGameObjectWithTag("Canvas").transform.position, Quaternion.identity);
+        instance.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
         instance.GetComponent<OverScreen>().SetTarget(gameObject.transform);
         instance.transform.SetAsFirstSibling();
         if(GameObject.Find("HUD"))

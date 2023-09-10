@@ -8,7 +8,7 @@ public class TacticalPointPut : MonoBehaviour
     [SerializeField] float interval;
     [SerializeField] int number;
 
-    List<GameObject> points;
+    List<GameObject> points = new();
 
     [ContextMenu("Put")]
     void Put()
