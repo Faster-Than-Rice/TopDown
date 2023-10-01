@@ -774,6 +774,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 5
   max: 5
   condition: 0
@@ -907,6 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17948693388cf04a910b5c853d31e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensor: {fileID: 0}
   objects:
   - {fileID: 684648942}
   - {fileID: 397352640}
@@ -938,6 +940,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  destroySensingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &446358497
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +975,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 5
   max: 10
   condition: 0
@@ -1289,6 +1295,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 5
   max: 10
   condition: 0
@@ -1358,6 +1365,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 5
   max: 5
   condition: 0
@@ -1790,6 +1798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17948693388cf04a910b5c853d31e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sensor: {fileID: 0}
   objects:
   - {fileID: 446358497}
   - {fileID: 599784889}
@@ -1821,6 +1830,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  destroySensingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1055787859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3193,6 +3205,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 2
   max: 5
   condition: 0
@@ -3653,7 +3666,7 @@ PrefabInstance:
     - target: {fileID: 1738004040670513824, guid: 5bd92bd75a7251241b98822a26fddf33,
         type: 3}
       propertyPath: limitTime
-      value: 120
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1738004040670513824, guid: 5bd92bd75a7251241b98822a26fddf33,
         type: 3}
@@ -3700,6 +3713,11 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 1121257926}
+    - target: {fileID: 1738004040670513839, guid: 5bd92bd75a7251241b98822a26fddf33,
+        type: 3}
+      propertyPath: maxHitPoint
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 1738004040670513839, guid: 5bd92bd75a7251241b98822a26fddf33,
         type: 3}
       propertyPath: destroyedEffect
@@ -3852,6 +3870,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 197027260840620988, guid: 8f0f31ca3d6207148b38041f48d433a8,
+        type: 3}
+      propertyPath: progressValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8543556296176616170, guid: 8f0f31ca3d6207148b38041f48d433a8,
         type: 3}
       propertyPath: m_Name

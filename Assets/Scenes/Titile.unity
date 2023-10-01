@@ -430,9 +430,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1692117580}
   - {fileID: 2272176731545622404}
   - {fileID: 531419204}
-  - {fileID: 1692117580}
   - {fileID: 148704694}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -846,7 +846,7 @@ RectTransform:
   m_Children:
   - {fileID: 1789027539}
   m_Father: {fileID: 79939271}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -875,8 +875,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Click to Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: fcdcb460b176ed84b9702c6a7ae60cb6, type: 2}
-  m_sharedMaterial: {fileID: -2291230197863804053, guid: fcdcb460b176ed84b9702c6a7ae60cb6,
+  m_fontAsset: {fileID: 11400000, guid: baf5990ef136e594abc52299c06d9b48, type: 2}
+  m_sharedMaterial: {fileID: 21500823079736722, guid: baf5990ef136e594abc52299c06d9b48,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   loops: -1
   id: 
   isRelative: 0
-  isFrom: 0
+  isFrom: 1
   isIndependentUpdate: 0
   autoKill: 1
   autoGenerate: 1
@@ -1207,7 +1207,7 @@ PrefabInstance:
     - target: {fileID: 1104789152346115984, guid: 8bf22ae88fff58348aab5d61460132d5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1104789152346115984, guid: 8bf22ae88fff58348aab5d61460132d5,
         type: 3}
@@ -1304,6 +1304,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Title
       objectReference: {fileID: 0}
+    - target: {fileID: 1104789152346115991, guid: 8bf22ae88fff58348aab5d61460132d5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bf22ae88fff58348aab5d61460132d5, type: 3}
 --- !u!4 &2272176731545622404 stripped
@@ -1323,6 +1328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794980476306533289, guid: 104923514f2861945bbf1f2be95368fc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2794980476306533290, guid: 104923514f2861945bbf1f2be95368fc,
         type: 3}
@@ -1458,7 +1468,7 @@ PrefabInstance:
     - target: {fileID: 4041602460756887082, guid: e538e0fb0e8c4494dac1f8cc00d98ba0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4041602460756887082, guid: e538e0fb0e8c4494dac1f8cc00d98ba0,
         type: 3}
@@ -1514,6 +1524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TitleEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4041602460756887085, guid: e538e0fb0e8c4494dac1f8cc00d98ba0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e538e0fb0e8c4494dac1f8cc00d98ba0, type: 3}

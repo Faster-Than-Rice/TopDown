@@ -45,7 +45,7 @@ public class PlayerDamage : MonoBehaviour, IDamage
 
         if(recoveryCount <= 0)
         {
-            hitPoint += 0.25f;
+            hitPoint += 0.1f;
             text.text = ((hitPoint / maxHitPoint) * 100).ToString("f0") + "%";
             bar.value = hitPoint / maxHitPoint;
         }

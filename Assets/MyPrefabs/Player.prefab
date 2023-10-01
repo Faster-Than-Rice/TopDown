@@ -255,10 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6fc46b14444674f9c2fffa9c6671c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoint: 300
+  maxHitPoint: 200
   bar: {fileID: 0}
   text: {fileID: 0}
-  recoveryTime: 3
+  recoveryTime: 1
   destroyedEffect: {fileID: 0}
   destroyedEvent:
     m_PersistentCalls:
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43d29df2111670468f5b543236039ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitTime: 300
+  limitTime: 100
   counterText: {fileID: 0}
   clearEffect: {fileID: 0}
   clearEvent:

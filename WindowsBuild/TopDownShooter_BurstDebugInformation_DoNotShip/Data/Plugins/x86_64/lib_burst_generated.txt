@@ -186,6 +186,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
+--root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.PlayerPrefsEditor.Samples.SampleScene.dll
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.Recorder.Base.dll
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
 --assembly-folder=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\
@@ -391,6 +392,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
+--root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.PlayerPrefsEditor.Samples.SampleScene.dll
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.Recorder.Base.dll
 --root-assembly=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
 --assembly-folder=C:\Users\shinm\Documents\GitHub\TopDown\Temp\StagingArea\Data\Managed\

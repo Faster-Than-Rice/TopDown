@@ -6389,6 +6389,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 2
   max: 10
   condition: 0
@@ -13392,6 +13393,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 2
   max: 10
   condition: 0
@@ -14129,6 +14131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapons:
   - {fileID: 3126434715197650758, guid: 592c6891c5a92ef42b29a7b8b81edc34, type: 3}
+  - {fileID: 3126434715197650758, guid: db5a01ee37dc3c9469be6842592f7965, type: 3}
   - {fileID: 3126434715197650758, guid: 7d38dfd95122d28478494c1c295f2553, type: 3}
 --- !u!65 &883124869
 BoxCollider:
@@ -14155,10 +14158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd6fc46b14444674f9c2fffa9c6671c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoint: 100
+  maxHitPoint: 200
   bar: {fileID: 2105126163}
   text: {fileID: 1121257926}
-  recoveryTime: 3
+  recoveryTime: 1
   destroyedEffect: {fileID: 1435574795}
   destroyedEvent:
     m_PersistentCalls:
@@ -17353,6 +17356,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 2
   max: 10
   condition: 0
@@ -18440,6 +18444,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 2
   max: 10
   condition: 0
@@ -23744,7 +23749,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a7bcb29a1f4e5e749a8ccaaa4865f2db, type: 2}
+  - {fileID: 2100000, guid: d240f1f610d280a43a82e1ceefafff91, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27061,6 +27066,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: a454fb1a819eb494d898ad2ad875bc45,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 1
   max: 2
   condition: 0
@@ -29716,6 +29722,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 7355b9a0f3d22c744935e0fa36786213,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 1
   max: 4
   condition: 0
@@ -33929,6 +33936,7 @@ MonoBehaviour:
   unitObject: {fileID: 1864358789057570239, guid: 648cad4532deac842bb6dba7e0e5cced,
     type: 3}
   effect: {fileID: 5032362366267668215, guid: f41da64fc5874ba4295c7ab3bb6fd4ce, type: 3}
+  delay: 0.5
   min: 2
   max: 5
   condition: 0

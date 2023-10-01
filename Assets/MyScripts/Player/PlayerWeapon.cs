@@ -19,6 +19,11 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Update()
     {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
+
         //ŽËŒ‚
         if (Input.GetMouseButton(0))
         {

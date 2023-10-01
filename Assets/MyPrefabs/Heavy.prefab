@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5ded0efd6917c45975ed21f9dcf9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 200
+  maxDistance: 50
   minDistance: 15
 --- !u!114 &1864358789057570224
 MonoBehaviour:
@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa3c707281245c479d5712d218aa218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followingDistance: 100
-  isFar: 0
+  followingDistance: 30
+  isFar: 1
 --- !u!114 &1864358789057570226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c9819e768dfc449bb2b103e7e9c5c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 25
+  hp: 30
   effect: {fileID: 5032362366267668215, guid: 4cc4026c723fa8e44ae0e0abd496a993, type: 3}
   overScreen: {fileID: 1240866070650813740, guid: a96eb735d4a4ddb43a8b81e3c063eede,
     type: 3}
@@ -179,7 +179,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 45
+  m_Speed: 20
   m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 0
@@ -214,6 +214,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1864358789057570235}
     m_Modifications:
+    - target: {fileID: 2287195825807023263, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
+        type: 3}
+      propertyPath: mask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5483705602370618022, guid: 6d636e29aed0c1e4badf92fc6e421c5d,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -41,19 +41,18 @@ public class Operator : MonoBehaviour
             {
                 dialogueEvent.Invoke();
                 dialogues.RemoveAt(0);
+                break;
             }
-            else
+
+            if (!float.TryParse(dialogues[0], out float f))
             {
-                if (!float.TryParse(dialogues[0], out float f))
-                {
-                    GameObject text = Instantiate(textObject, transform.localPosition, Quaternion.identity);
-                    text.transform.SetParent(transform, false);
-                    text.transform.localPosition = Vector3.zero;
-                    text.GetComponent<TextMeshProUGUI>().text = dialogues[0];
-                }
-                dialogues.RemoveAt(0);
-                yield return new WaitForSeconds(interval + f);
+                GameObject text = Instantiate(textObject, transform.localPosition, Quaternion.identity);
+                text.transform.SetParent(transform, false);
+                text.transform.localPosition = Vector3.zero;
+                text.GetComponent<TextMeshProUGUI>().text = dialogues[0];
             }
+            dialogues.RemoveAt(0);
+            yield return new WaitForSeconds(interval + f);
         }
 
         isPut = false;

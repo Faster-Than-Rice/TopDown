@@ -134,7 +134,7 @@ MonoBehaviour:
   muzzles:
   - {fileID: 3126434716237971156}
   bullet: {fileID: 1717896086254242124, guid: 07f47c51524f9d34494dcbb028b412f9, type: 3}
-  interval: 0.2
+  interval: 0.3
   power: 120
   attackEvent:
     m_PersistentCalls:

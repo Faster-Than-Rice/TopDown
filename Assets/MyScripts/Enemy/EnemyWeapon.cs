@@ -45,8 +45,7 @@ public class EnemyWeapon : MonoBehaviour
 
     void LookTarget()
     {
-        Vector3 vector3 = (new Vector3(Random.Range(0, randomValue), 0, Random.Range(0,randomValue)) 
-            + target.transform.position) - this.transform.position;
+        Vector3 vector3 = target.transform.position - this.transform.position;
         Quaternion quaternion = Quaternion.LookRotation(vector3);
         transform.rotation = Quaternion.Slerp(this.transform.rotation, quaternion, speed);
     }

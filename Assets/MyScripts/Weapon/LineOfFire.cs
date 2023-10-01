@@ -17,7 +17,11 @@ public class LineOfFire : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, Mathf.Infinity, mask))
         {
-            line.SetPositions(new Vector3[]{transform.position, hit.point});
+            line.SetPositions(new Vector3[] { transform.position, hit.point });
+        }
+        else
+        {
+            line.SetPositions(new Vector3[] { transform.position, transform.position + transform.forward * 1000 });
         }
     }
 }

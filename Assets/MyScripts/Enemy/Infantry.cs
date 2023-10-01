@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class Infantry : MonoBehaviour, IEnemyState
 {
     [SerializeField] float followingDistance;
+    [SerializeField] bool isRandom;
     [SerializeField] bool isFar;
     EnemyState state = new();
     EnemyStatus status;
@@ -68,7 +69,9 @@ public class Infantry : MonoBehaviour, IEnemyState
 
                 if (pos.Count != 0)
                 {
-                    if (isFar)
+                    if (isRandom)
+                        agentTarget = MyUtility.GetRandom(pos);
+                    else if (isFar)
                         agentTarget = pos[0];
                     else
                         agentTarget = pos[pos.Count - 1];
