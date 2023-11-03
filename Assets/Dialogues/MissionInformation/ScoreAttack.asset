@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ScoreAttack
   m_EditorClassIdentifier: 
   missionNumber: EX
-  missionName: "\u30B9\u30B3\u30A2\u30A2\u30BF\u30C3\u30AF"
+  missionValue: 4
+  missionName: "\u5BFE\u591A\u6570\u4EEE\u60F3\u6226\u95D8\u6F14\u7FD2"
   missionTarget: "\u6575\u306E\u6483\u7834"
   missionTime: "2\u520600\u79D2"
   missionThreat: '-'

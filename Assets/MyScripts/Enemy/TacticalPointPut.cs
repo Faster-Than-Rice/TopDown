@@ -28,7 +28,7 @@ public class TacticalPointPut : MonoBehaviour
         points.Clear();
     }
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         float size = interval * number;
         Vector3 terminus = new Vector3(size, 1, size);

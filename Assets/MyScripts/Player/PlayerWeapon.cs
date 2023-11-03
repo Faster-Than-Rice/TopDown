@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    [SerializeField] GameObject[] weapons;
+    WeaponData[] weapons;
     GameObject weaponObject;
     IWeapon weapon;
     int changeNumber = 1;
 
     private void Start()
     {
-        weaponObject = Instantiate(weapons[0], transform.position, Quaternion.identity);
+        weapons = Resources.Load<Equipped>("Weapon").weapons.ToArray();
+        weaponObject = Instantiate(weapons[0].weaponObject, transform.position, Quaternion.identity);
         weaponObject.transform.SetParent(transform);
         weaponObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
         weapon = weaponObject.GetComponent<IWeapon>();
@@ -39,7 +40,7 @@ public class PlayerWeapon : MonoBehaviour
                 changeNumber = 1;
             }
             Destroy(weaponObject);
-            weaponObject = Instantiate(weapons[changeNumber - 1], transform.position, Quaternion.identity);
+            weaponObject = Instantiate(weapons[changeNumber - 1].weaponObject, transform.position, Quaternion.identity);
             weaponObject.transform.SetParent(transform);
             weaponObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
             weapon = weaponObject.GetComponent<IWeapon>();

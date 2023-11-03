@@ -7,6 +7,7 @@ using UnityEngine;
 public class MissionInformation : ScriptableObject
 {
     public string missionNumber;
+    public int missionValue;
     public string missionName;
     public string missionTarget;
     public string missionTime;

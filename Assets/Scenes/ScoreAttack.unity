@@ -11134,6 +11134,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 883124872}
+        m_TargetAssemblyTypeName: Score, Assembly-CSharp
+        m_MethodName: SaveScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onPlay:
     m_PersistentCalls:
       m_Calls: []
@@ -14129,10 +14141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4205527543780d14597fb533b04bb0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 3126434715197650758, guid: 592c6891c5a92ef42b29a7b8b81edc34, type: 3}
-  - {fileID: 3126434715197650758, guid: db5a01ee37dc3c9469be6842592f7965, type: 3}
-  - {fileID: 3126434715197650758, guid: 7d38dfd95122d28478494c1c295f2553, type: 3}
 --- !u!65 &883124869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14225,6 +14233,7 @@ MonoBehaviour:
   scoreEvent:
     m_PersistentCalls:
       m_Calls: []
+  missionNumber: 4
 --- !u!114 &883124873
 MonoBehaviour:
   m_ObjectHideFlags: 0

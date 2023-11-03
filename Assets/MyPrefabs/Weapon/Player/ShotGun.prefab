@@ -86,7 +86,7 @@ MonoBehaviour:
   - {fileID: 7702332332088467735}
   - {fileID: 648999759634414367}
   - {fileID: 572299994925232572}
-  bullet: {fileID: 1717896086254242124, guid: eefb35d48caa15641bea14616dea3bef, type: 3}
+  bullet: {fileID: 1717896086254242124, guid: b8352fd0575ab8748b60d60d5bc3c47a, type: 3}
   interval: 0.3
   power: 150
   attackEvent:

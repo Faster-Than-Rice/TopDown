@@ -33,7 +33,7 @@ public class PlayerDamage : MonoBehaviour, IDamage
         recoveryCount = recoveryTime;
         hitPoint = Mathf.Clamp(hitPoint, 0, maxHitPoint);
 
-        if(hitPoint <= 0)
+        if(hitPoint <= 0 && enabled)
         {
             GameOver();
         }

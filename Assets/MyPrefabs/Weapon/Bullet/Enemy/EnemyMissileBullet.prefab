@@ -59,7 +59,7 @@ MonoBehaviour:
   effect: {fileID: 5032362366267668215, guid: 87f5ac7c7f4bf7e419442bbf4a234ea1, type: 3}
   speed: 300000
   limit: 75
-  damage: 5
+  damage: 20
   randomValue: 10
   unLockAngle: 70
 --- !u!54 &737920752331673930

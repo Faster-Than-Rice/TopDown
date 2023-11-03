@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mission2.unity
     guid: 9e620863e3afdd047a54274d49180c92
+  - enabled: 1
+    path: Assets/Scenes/Mission3.unity
+    guid: eeb8b2f9d59fe87499e8f06e08cfa41f
   m_configObjects: {}
