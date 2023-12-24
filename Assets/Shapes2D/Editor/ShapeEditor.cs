@@ -709,7 +709,6 @@
             }
         }
 
-        [System.Obsolete]
         private void ConvertToSprite(Shape shape) {
             string dname = "Assets/Resources/Shapes2D Sprites";
             string fname = dname + "/" + shape.name + ".png"; 
@@ -740,10 +739,8 @@
                     as TextureImporter;
             TextureImporterSettings texSettings = new TextureImporterSettings();
             textureImporter.ReadTextureSettings(texSettings);
-            texSettings.ApplyTextureType(TextureImporterType.Sprite, true);
-
-#if UNITY_5_5_OR_NEWER
-            texSettings.ApplyTextureType(TextureImporterType.Sprite);
+            #if UNITY_5_5_OR_NEWER
+                texSettings.ApplyTextureType(TextureImporterType.Sprite);
             #else
                 texSettings.ApplyTextureType(TextureImporterType.Sprite, true);
             #endif
@@ -885,6 +882,7 @@
             
             EditorGUI.BeginDisabledGroup(Selection.objects.Length != 1);
             if (GUILayout.Button("Convert to Sprite"))
+                ConvertToSprite(shape);
             EditorGUI.EndDisabledGroup();
             
             EditorGUI.EndDisabledGroup();

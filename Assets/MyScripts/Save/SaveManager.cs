@@ -11,6 +11,7 @@ public static class SaveManager
     {
         string saveDatajson = JsonUtility.ToJson(save);
         Debug.Log(saveDatajson);
+        Debug.Log(saveDataPath);
         File.WriteAllText(saveDataPath, saveDatajson);
     }
 

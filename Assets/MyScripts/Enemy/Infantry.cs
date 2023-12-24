@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -62,7 +62,7 @@ public class Infantry : MonoBehaviour, IEnemyState
         if (state.state == EnemyState.State.Aggressive 
             && (agent.destination == null || Vector3.Distance(transform.position, agent.destination) <= 10 || counter >= 3))
         {
-            if(Vector3.Distance(transform.position, target.transform.position) <= followingDistance)
+            if((target.transform.position - transform.position).sqrMagnitude <= Math.Pow(followingDistance, 2))
             {
                 List<GameObject> pos = new(tacticalPosition.Search(target.transform));
                 pos.RemoveAll(point => point == agentTarget);
